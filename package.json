@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "vitest": "^0.32.4"
+  },
+  "dependencies": {
+    "prompts": "^2.4.2"
+  },
+  "scripts": {
+    "test": "node hang.js",
+    "vit": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "type": "module"
+}
