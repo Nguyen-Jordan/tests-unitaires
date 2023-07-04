@@ -64,14 +64,66 @@
     doit être modifié ou supprimé !<br>
     • <span style='color: #f1840e;'>Les tests doivent être isolés et indépendants :</span> chaque test doit pouvoir être  exécuté, seul, et après ou avant n’importe quel autre test. Son bon fonctionnement
     ne doit pas dépendre du contexte fourni par un autre test.
-    </li>
-    <li><span style='color: #02a2bc;  font-size: 18px;'>À l’inverse, et toujours sans vous aider d’internet, qu’est-ce qui pourrait être une mauvaise pratique de conception de test ?</span><br>
-    • <span style='color: #f1840e;'>Charger « trop » de code pour un test unitaire :</span> ceci dépend souvent de la conception du code, charger trop de code est souvent signe de la présence de code trop complexe ou de structures trop peu découplées.<br>
-    • <span style='color: #f1840e;'>Dépendre de services extérieurs :</span> une dépendance à un service extérieur conduira à un test parfois en erreur, parfois non, suivant la disponibilité de cette
+    </li>getLetter, getWord, isInclude,
+    letsTry, isLost,isAlreadyInsert,
+    pushOnTable, showPlayerGuess, isWin
     dépendance. On préfèrera l’utilisation de mocks (stub, spy, fake, mock) pour éviter cela.<br>
     • <span style='color: #f1840e;'>Utiliser des try…catch :</span> dans les tests unitaires, on s’attend à telle ou telle erreur bien spécifique. On privilégie (quand le framework le permet) l’assertion sur
     le bon déclenchement d’une erreur.
     </li>
 </ul>
 
+<h2 style='color:#ff0000; font-size: 50px;'>Cahier des test</h2>
+
+<h3 style='color: #02a2bc;  font-size: 18px;'> Comment rédiger un cahier de test ? </h3>
+
+Lors de la rédaction du cahier de test, il est important d’inclure les éléments suivant
+
+<ul>
+    <li><span style='color: #f1840e;'>Nom du test: </span>Le titre qui décrit la fonctionnalité à tester.</li>
+    <li><span style='color: #f1840e;'>ID du test : </span>Généralement un identifiant numérique ou alphanumérique que les testeurs utilisent pour regrouper les cas de test en suites de test.</li>
+    <li><span style='color: #f1840e;'>Objectif : </span>Également appelé description, ce composant décrit ce que le test doit valider.</li>
+    <li><span style='color: #f1840e;'>Références : </span>Liens vers vos « user stories » et les spécifications de conception ou les exigences que le test doit vérifier.</li>
+    <li><span style='color: #f1840e;'>Conditions préalables : </span>Toutes les conditions nécessaires pour que le testeur puisse effectuer le test.</li>
+    <li><span style='color: #f1840e;'>Configurations : </span>Ce composant identifie ce dont le scénario de test a besoin pour fonctionner correctement, comme la version de l'application, le système d'exploitation, les exigences en matière de date et d'heure et les spécifications de sécurité.</li>
+    <li><span style='color: #f1840e;'>Étapes de test : </span>Des descriptions détaillées des actions séquentielles qui doivent être effectuées pour terminer le test.</li>
+    <li><span style='color: #f1840e;'>Résultat attendu : </span>Une explication de la manière dont la fonctionnalité ou le système doit réagir.</li>
+</ul>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Objectif</th>
+            <th>Résultat attendu</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>1</th>
+            <th>return a valid letter</th>
+            <th>Retourne un caractère en majuscules</th>
+            <th>Il récupère un caractère et il retourne le caractère en majuscules</th>
+        </tr>
+        <tr>
+            <th>2</th>
+            <th>get a word from the table</th>
+            <th>Il choisi un mot du tableau</th>
+            <th>Il récupère un mot aléatoire du tableau</th>
+        </tr>
+        <tr>
+            <th>3</th>
+            <th>contain letter on the word</th>
+            <th>Il vérifie si le caractère fait partie du mot</th>
+            <th>Il vérifie si le caractère fait partie du mot et il retourne un boolean</th>
+        </tr>
+        <tr>
+            <th>4</th>
+            <th>lets try count down</th>
+            <th>Il vérifie la valeur et il décompte ou pas</th>
+            <th>Il récupère un boolean et si il est false il soustrait le compteur</th>
+        </tr>
+    </tbody>
+</table>
 
